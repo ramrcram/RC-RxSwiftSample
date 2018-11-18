@@ -1,2 +1,2 @@
-# rx-emailtextview
-This is UItextview with accept only valid email
+# RC-RxSwiftSample
+Few sample which i have created.
