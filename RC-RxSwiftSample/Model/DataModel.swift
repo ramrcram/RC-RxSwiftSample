@@ -9,6 +9,4 @@
 struct PersonModel {
     let name:String
     let age:Int
-    let sex:String
-    let address:String
 }

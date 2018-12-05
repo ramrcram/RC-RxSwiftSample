@@ -10,24 +10,14 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-struct DataBindingVM {
+class DataBindingVM {
     
-    let dataModel = [
-        PersonModel(name:"name1",age:22,sex:"male",address:"address-1"),
-        PersonModel(name:"name2",age:22,sex:"male",address:"address-2"),
-        PersonModel(name:"name3",age:22,sex:"male",address:"address-3"),
-        PersonModel(name:"name4",age:22,sex:"male",address:"address-4"),
-        PersonModel(name:"name5",age:22,sex:"male",address:"address-5"),
-        PersonModel(name:"name6",age:22,sex:"male",address:"address-6")
-    ]
-    
-    var objArray: Observable<[PersonModel]>?
-    
-    init() {
-        
-    }
-    
-    mutating func prepareModel() {
-         objArray = Observable.just(dataModel)
-    }
+    var dataModel: Variable<[PersonModel]> = Variable([
+        PersonModel(name:"name1",age:22),
+        PersonModel(name:"name2",age:22),
+        PersonModel(name:"name3",age:22),
+        PersonModel(name:"name4",age:22),
+        PersonModel(name:"name5",age:22),
+        PersonModel(name:"name6",age:22)
+    ])
 }
